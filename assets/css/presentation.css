@@ -144,5 +144,8 @@ body.deck-body{
   body.deck-body{ overflow:visible; display:block; height:auto; }
   .deck{ height:auto; overflow:visible; }
   .slide{ display:flex !important; height:auto; min-height:100vh; page-break-after:always; overflow:visible; }
-  .deck-topbar, .deck-arrows, .slide-dots{ display:none !important; }
+  .deck-topbar, .deck-arrows, .deck-nav, .slide-dots{ display:none !important; }
+  .slide::before{ display:none; }
+  .slide-cover{ min-height:0; height:100vh; overflow:hidden; }
+  .slide-cover::after{ display:none; }
 }
