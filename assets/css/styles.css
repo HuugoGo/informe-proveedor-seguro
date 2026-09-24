@@ -435,6 +435,7 @@ table.data-table tbody tr:hover{ background: color-mix(in srgb, var(--am-teal-ti
 .module-step .today-tag{ display:block; margin-top:2px; font-size:.66rem; font-weight:700; color: var(--am-gold); }
 .module-step.rescheduled .dot{ background: var(--am-gold); border-color: var(--am-gold); color:#fff; }
 .module-step.rescheduled p{ color: var(--text); font-weight:600; }
+.module-step.rescheduled .today-tag{ font-weight:600; }
 
 .track-legend{ display:flex; flex-wrap:wrap; gap:18px; margin: 16px 0 0; }
 .track-legend span{ display:inline-flex; align-items:center; gap:7px; font-size:.8rem; color: var(--text-soft); }
