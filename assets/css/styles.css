@@ -433,12 +433,15 @@ table.data-table tbody tr:hover{ background: color-mix(in srgb, var(--am-teal-ti
 .module-track.track-compact p{ font-size:.7rem; }
 .module-step.today .dot{ border-color: var(--am-gold); box-shadow: 0 0 0 4px var(--am-gold-tint); }
 .module-step .today-tag{ display:block; margin-top:2px; font-size:.66rem; font-weight:700; color: var(--am-gold); }
+.module-step.rescheduled .dot{ background: var(--am-gold); border-color: var(--am-gold); color:#fff; }
+.module-step.rescheduled p{ color: var(--text); font-weight:600; }
 
 .track-legend{ display:flex; flex-wrap:wrap; gap:18px; margin: 16px 0 0; }
 .track-legend span{ display:inline-flex; align-items:center; gap:7px; font-size:.8rem; color: var(--text-soft); }
 .track-legend i{ display:inline-block; width:12px; height:12px; border-radius:50%; background: var(--surface); border:2px solid var(--border); box-sizing:border-box; }
 .track-legend i.done{ background: var(--am-teal); border-color: var(--am-teal); }
 .track-legend i.today{ background: var(--surface); border-color: var(--am-gold); box-shadow: 0 0 0 3px var(--am-gold-tint); }
+.track-legend i.rescheduled{ background: var(--am-gold); border-color: var(--am-gold); }
 
 @media (max-width: 780px){
   .module-track{ grid-template-columns:1fr; gap:18px; }
