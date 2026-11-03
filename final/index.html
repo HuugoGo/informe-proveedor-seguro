@@ -257,6 +257,24 @@ footer.end{border-top:1px solid var(--border);padding-block:26px 40px;padding-le
 .hub-tab:hover{color:var(--text)}
 .hub-tab[aria-selected="true"]{background:var(--surface);color:var(--teal-ink);box-shadow:var(--shadow-sm)}
 .hub-tab small{display:block;font:500 .68rem var(--font-body);color:var(--text-faint)}
+.hub-home{background:linear-gradient(120deg,var(--am-teal-tint) 0%,#F4FAFA 60%,var(--bg) 100%);min-height:calc(100vh - 70px);padding-block:56px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.home-in{max-width:980px;margin:0 auto}
+.hub-home h1{font-size:clamp(1.7rem,3.8vw,2.6rem);color:var(--teal-ink);font-weight:700;margin:16px 0 12px;max-width:760px}
+.home-lead{max-width:640px;font-size:1.02rem;margin:0 0 34px}
+.home-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.home-card{background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--am-teal);border-radius:var(--radius);padding:26px 26px 22px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:14px;min-width:0}
+.home-eyebrow{font:600 .72rem var(--font-display);text-transform:uppercase;letter-spacing:.12em;color:var(--gold-ink)}
+.home-card h2{font-size:1.6rem;color:var(--text);margin:0}
+.home-stats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}
+.home-stats li{margin:0;font-size:.82rem;color:var(--text-soft);line-height:1.3}
+.home-stats b{display:block;font:700 1.35rem var(--font-display);color:var(--h-chapter);line-height:1.1;font-variant-numeric:tabular-nums}
+.home-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:auto;padding-top:6px}
+.home-go{border:0;background:var(--am-teal);color:#fff;font:600 .92rem var(--font-display);padding:11px 22px;border-radius:99px;cursor:pointer}
+.home-go:hover{background:var(--am-teal-dark)}
+.home-pdf{font-size:.84rem;font-weight:600;color:var(--teal-ink)}
+.home-foot{margin:34px 0 0;font-size:.82rem;color:var(--text-faint)}
+@media (max-width:700px){.home-cards{grid-template-columns:1fr}.hub-home{padding-block:36px 44px}}
+@media print{.hub-home{display:none!important}}
 
 /* ---------- Impresión (PDF) ---------- */
 @page{size:A4;margin:14mm 12mm}
@@ -278,18 +296,30 @@ footer.end{border-top:1px solid var(--border);padding-block:26px 40px;padding-le
   figure.slot{width:min(100%,380px);margin:14px auto}
   .kpi{box-shadow:none}
 }
-.hub-title-block{min-width:0}.hub-links{margin:2px 0 0;font-size:.78rem;color:var(--text-faint)}.hub-links a{color:var(--teal-ink);font-weight:600}
 </style>
 </head>
 <body>
 <div class="hub-head"><div class="hub-head-in">
-  <div class="hub-title-block"><p class="hub-title">Informes finales Proveedor Seguro</p><p class="hub-links">Descargar PDF: <a href="informe-final-maria-elena.pdf">María Elena</a> · <a href="informe-final-sierra-gorda.pdf">Sierra Gorda</a></p></div>
-  <div class="hub-tabs" role="tablist" aria-label="Territorio">
-    <button type="button" class="hub-tab" role="tab" data-target="maria-elena" aria-selected="true">María Elena<small>Minera Antucoya</small></button>
+  <p class="hub-title">Informes finales Proveedor Seguro</p>
+  <div class="hub-tabs" role="tablist" aria-label="Informe">
+    <button type="button" class="hub-tab" role="tab" data-target="inicio" aria-selected="true">Inicio</button>
+    <button type="button" class="hub-tab" role="tab" data-target="maria-elena" aria-selected="false">María Elena<small>Minera Antucoya</small></button>
     <button type="button" class="hub-tab" role="tab" data-target="sierra-gorda" aria-selected="false">Sierra Gorda<small>Minera Centinela</small></button>
   </div>
 </div></div>
-<div class="report" id="maria-elena" data-code="me">
+<section class="hub-home" id="inicio">
+<div class="home-in">
+<span class="eyebrow">Programa Proveedor Seguro · 2026</span>
+<h1>Informes finales de resultados y aprendizajes</h1>
+<p class="home-lead">Componente de levantamiento técnico y elaboración de herramientas preventivas. Elige el territorio cuyo informe quieres revisar.</p>
+<div class="home-cards">
+<article class="home-card"><span class="home-eyebrow">Minera Antucoya</span><h2>María Elena</h2><ul class="home-stats"><li><b>9</b>empresas visitadas</li><li><b>100%</b>cobertura</li><li><b>4</b>jornadas de terreno</li><li><b>27</b>instrumentos</li></ul><div class="home-actions"><button type="button" class="home-go" data-target="maria-elena">Ver informe</button><a class="home-pdf" href="informe-final-maria-elena.pdf">Descargar PDF</a></div></article>
+<article class="home-card"><span class="home-eyebrow">Minera Centinela</span><h2>Sierra Gorda</h2><ul class="home-stats"><li><b>37</b>empresas visitadas</li><li><b>92,5%</b>cobertura</li><li><b>5</b>jornadas de terreno</li><li><b>137</b>matrices entregadas</li></ul><div class="home-actions"><button type="button" class="home-go" data-target="sierra-gorda">Ver informe</button><a class="home-pdf" href="informe-final-sierra-gorda.pdf">Descargar PDF</a></div></article>
+</div>
+<p class="home-foot">Dos Barbas Consultora · Octubre de 2026</p>
+</div>
+</section>
+<div class="report" id="maria-elena" data-code="me" hidden>
 <header class="cover" id="me-top">
   <div class="cover-in">
     <span class="eyebrow">Programa Proveedor Seguro · Minera Antucoya 2026</span>
@@ -2132,18 +2162,25 @@ var reps=[].slice.call(document.querySelectorAll('.report'));
 reps.forEach(initReport);
 
 /* Vista conjunta: pestañas por territorio */
+var home=document.getElementById('inicio');
 var tabs=[].slice.call(document.querySelectorAll('.hub-tab'));
-if(tabs.length){
+var goers=[].slice.call(document.querySelectorAll('[data-target]'));
+if(home){
   function select(id,fromUser){
+    if(id!=='maria-elena'&&id!=='sierra-gorda')id='inicio';
+    home.hidden=(id!=='inicio');
     reps.forEach(function(r){r.hidden=(r.id!==id);});
     tabs.forEach(function(t){t.setAttribute('aria-selected',t.getAttribute('data-target')===id?'true':'false');});
-    if(fromUser)window.scrollTo(0,0);
+    if(fromUser){
+      window.scrollTo(0,0);
+      try{history.pushState(null,'',id==='inicio'?location.pathname+location.search:'#'+id);}catch(e){}
+    }
     window.dispatchEvent(new Event('resize'));
     reps.forEach(function(r){if(r._refresh)r._refresh();});
   }
-  tabs.forEach(function(t){t.addEventListener('click',function(){select(t.getAttribute('data-target'),true);});});
-  function fromHash(){var h=(location.hash||'').slice(1);select(h==='sierra-gorda'?'sierra-gorda':'maria-elena',false);}
-  window.addEventListener('hashchange',fromHash);fromHash();
+  goers.forEach(function(g){g.addEventListener('click',function(e){if(g.tagName==='A'&&g.getAttribute('href')&&g.getAttribute('href').charAt(0)!=='#')return;e.preventDefault();select(g.getAttribute('data-target'),true);});});
+  function fromHash(){select((location.hash||'').slice(1),false);}
+  window.addEventListener('hashchange',fromHash);window.addEventListener('popstate',fromHash);fromHash();
 }
 })();
 </script>
